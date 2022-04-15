@@ -19,7 +19,10 @@ const Cart = () => {
 
 
     return (
-      <div>    
+      <div>
+        <div className="heading">
+             <h1>Cart </h1>
+           </div>    
          <div className="ul">
           {products && products.map((product, i)=>(
             <div className="li" key={i}>

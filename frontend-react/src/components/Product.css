@@ -113,3 +113,28 @@
     margin: auto;
     height: 100%;
 }
+
+.heading {
+    width: 40%;
+    height : 50px;
+    margin:auto;
+    text-align:center;
+    
+}
+
+.heading2 {
+    width: 60%;
+    height : 40px;
+    margin:auto;
+    text-align:center;
+}
+
+.mt {
+    margin-top: 30px;
+}
+.tb {
+    margin: auto;
+}
+.tb  Button {
+    margin-right: 20px;
+}
