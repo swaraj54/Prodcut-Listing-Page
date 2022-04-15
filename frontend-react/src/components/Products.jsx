@@ -18,7 +18,9 @@ const Products = () => {
     const [products, setProducts] = useState();
     
     useEffect(()=>{
-      fetchHandler().then((data)=> setTrail(data.product))
+      fetchHandler().then((data)=> {setTrail(data.product)
+        setProducts(data.product)
+      })
     },[]);
 
     const filterItem = (cateItem) => {
