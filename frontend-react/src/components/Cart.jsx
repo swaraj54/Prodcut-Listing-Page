@@ -4,7 +4,7 @@ import CartProduct from "./CartProduct.jsx";
 import './Product.css';
 
 
-const URL = "http://localhost:5000/addcart";
+const URL = "http://localhost:5000/cartproducts";
 
 const fetchHandler = async () => {
   return await axios.get(URL).then((res)=>res.data)

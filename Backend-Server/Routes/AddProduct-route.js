@@ -1,11 +1,11 @@
 const express = require('express');
-const bouter = express.Router();
+const router = express.Router();
 
 const addproductController = require('../Controller/AddProduct-Cont.js')
 
-bouter.get("/", addproductController.getAllProduct);
-bouter.post("/", addproductController.addcartProduct);
+router.get("/", addproductController.getAllProduct);
+router.post("/", addproductController.addcartProduct);
 
 
 
-module.exports = bouter; 
+module.exports = router; 

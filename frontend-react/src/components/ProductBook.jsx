@@ -21,7 +21,7 @@ const ProductBook = () => {
 
 
     const sendRequest = async () => {
-        await axios.post(`http://localhost:5000/addcart/${id}`, {
+        await axios.post(`http://localhost:5000/cartproducts`, {
             name:String(name),
             category:String(category),
             brand:String(brand),
@@ -39,7 +39,6 @@ const ProductBook = () => {
         <div>
             <div className="cardd">
                 <img alt="img" src={image} />
-                
             </div>
         </div>
         <div className="card2">
@@ -62,4 +61,4 @@ const ProductBook = () => {
 
 
 
-export default ProductBook();
+export default ProductBook;

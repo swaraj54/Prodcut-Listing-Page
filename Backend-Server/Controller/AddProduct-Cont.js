@@ -1,10 +1,10 @@
 
-const cartProduct = require('../Model/CartProducts');
+const CartProducts = require('../Model/CartProducts');
 
 const getAllProduct = async (req,res,next) => {
     let product ;
     try {
-        product = await cartProduct.find();
+        product = await CartProducts.find();
     } catch(err){
         console.error(err);
     }
@@ -15,18 +15,18 @@ const getAllProduct = async (req,res,next) => {
 }
 
 const addcartProduct = async (req, res, next) => {
-    const{name, brand, category, price, available, image} = req.body;
+    const{name, brand, category, price, image} = req.body;
     let product;
     try{
-        product = new cartProduct({
-            name, brand, category, price, available, image
+        product = new CartProducts({
+            name, brand, category, price, image
         })
         await product.save();
     } catch(err){
         console.log(err);
     }
     if(!product){
-        return res.status(500).json({message:"Prodcut Not Added"});
+        return res.status(500).json({message:"Product Not Added"});
     }
     return res.status(201).json({product});
 }

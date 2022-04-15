@@ -2,12 +2,16 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const router = require('./Routes/Product-Routes');
-const bouter = require('./Routes/AddProduct-route')
+const router1 = require('./Routes/AddProduct-route')
+var bodyParser = require('body-parser');
+
+
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use(bodyParser.json());
 
 
 mongoose.connect("mongodb+srv://swaraj1920:swaraj1920@cluster0.6yd9l.mongodb.net/ProductListing?retryWrites=true&w=majority")
@@ -17,4 +21,4 @@ mongoose.connect("mongodb+srv://swaraj1920:swaraj1920@cluster0.6yd9l.mongodb.net
 
 
 app.use("/products", router);
-app.use("/addcart", bouter)
+app.use("/cartproducts", router1)
