@@ -40,7 +40,18 @@ const Products = () => {
       <div>
         <div className='heading2'>
           <h1>Choose Prodcuts here</h1>
-          <AppBar style={{backgroundColor:'gray'}} position="sticky">
+          <div className="mt2">
+            <Typography variant="border" sx={{fontSize:"24px", fontWeight:"bold"}} >Filter with Price </Typography>
+            <Slider  aria-label="Temperature"
+              defaultValue={600}
+              valueLabelDisplay="auto"
+            getAriaValueText={valuetext}
+              marks
+              min={10}
+              max={600} />
+            
+            </div>
+          <AppBar style={{backgroundColor:'gray', marginTop:"20px"}} position="sticky">
             <Toolbar>
                 <Tabs className="tb" textColor="inherit"  >
                     {/* <Tab LinkComponent={NavLink} to="/products" label="Products"/>
@@ -56,17 +67,7 @@ const Products = () => {
                  </Tabs>
             </Toolbar> 
         </AppBar>
-        <div className="mt2">
-        <Typography variant="border" sx={{fontSize:"24px", fontWeight:"bold"}} >Filter with Price </Typography>
-        <Slider  aria-label="Temperature"
-          defaultValue={600}
-          valueLabelDisplay="auto"
-        getAriaValueText={valuetext}
-          marks
-          min={10}
-          max={600} />
         
-        </div>
         </div>
         <div className="ul mt">
         {products && products.map((product, i)=>(
