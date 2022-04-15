@@ -130,7 +130,7 @@
 }
 
 .mt {
-    margin-top: 30px;
+    margin-top: 160px;
 }
 .tb {
     margin: auto;
@@ -138,3 +138,6 @@
 .tb  Button {
     margin-right: 20px;
 }
+.mt2 {
+    margin-top: 30px;
+} 

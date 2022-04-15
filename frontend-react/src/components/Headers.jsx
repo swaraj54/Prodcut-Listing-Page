@@ -12,7 +12,7 @@ const Headers = () => {
                 <NavLink to="/" style={{color:"white"}} >
                 <Typography><LocalHospitalIcon/><Tab label="Home"/></Typography>  
                 </NavLink>
-                <Tabs sx={{ml:"auto"}} textColor="inherit" value={value} indicatorColor="secondary" onChange={(e,val)=>setValue(val)} >
+                <Tabs sx={{ml:"auto"}} textColor="inherit"  indicatorColor="secondary"  >
                     <Tab LinkComponent={NavLink} to="/products" label="Products"/>
                     <Tab LinkComponent={NavLink} to="/cart" label="Cart"/>
                     {/* <Button variant="contained" >Logout</Button> */}
